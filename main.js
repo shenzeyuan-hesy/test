@@ -292,7 +292,8 @@ document.getElementById('configTypeMultiImage').onclick = function () {
 
 //设初始值
 var date = new Date();
-document.getElementById('configScreenshotDate').valueAsDate = date;
+var dateString = date.toISOString().substring(0, 10); 
+document.getElementById('configScreenshotDate').value = dateString;
 document.getElementById('configScreenshotTimeHour').value = date.getHours();
 document.getElementById('configScreenshotTimeMinute').value = date.getMinutes();
 document.getElementById('configPostDate').valueAsDate = date;
